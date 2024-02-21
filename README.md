@@ -2,7 +2,14 @@
  
 ## Thoughts
 
-- The driver for the Priam DataTower is baked into LOS and, from the sound of it, no additional software is needed to mount DataTower volumes. Additionally, in the 09/1984 issue of Signal 16, the writers had the following to say regarding the DataTower:
+If we're going to compile the LOS source code, we're going to need a Priam DataTower. [Said Al Kossow in regard to compiling LOS](https://forum.vcfed.org/index.php?threads/wtb-working-apple-lisa.1246678/page-2):
+
+>you really need something like a Priam Datatower (ie more disk space) to build LOS
+>the tools are all there in the Version 3 Pascal Workshop.
+
+It seems the compilation process is just too demanding of storage capacity; the 80MB of space the DataTower offered in 1982/3 would have certainly been more than enough (and had a price tag that reflected such a wealth of space).
+
+The driver for the Priam DataTower is baked into LOS and, from the sound of it, no additional software is needed to mount DataTower volumes. Additionally, in the 09/1984 issue of Signal 16, the writers had the following to say regarding the DataTower:
 
 >Signal 16, September 1984
 >Priam's DataTower Arrives
@@ -27,3 +34,4 @@
 
 This would seem to indicate that the Lisa is capable of booting from a DataTower and that such a boot option will show up at the main boot menu. I need to have a run of cards fabricated to test this...
 
+Also, BLU appears to be able to image DataTower volumes... I know James made the original set of schematics for the interface card, so this means he must have not only got his DataTower fully operational but also that he was able to successfully reverse-engineer the system-level protocols for talking to the disk and at least read data (if not write) from it. Must reach out to him to see if he'd be willing to share data/documentation in regard to this. If so, this would be a huge leap forward toward an building an emulated DataTower.
