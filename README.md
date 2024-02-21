@@ -5,7 +5,7 @@
 If we're going to compile the LOS source code, we're going to need a Priam DataTower. [Said Al Kossow in regard to compiling LOS](https://forum.vcfed.org/index.php?threads/wtb-working-apple-lisa.1246678/page-2):
 
 >you really need something like a Priam Datatower (ie more disk space) to build LOS
-
+>
 >the tools are all there in the Version 3 Pascal Workshop.
 
 It seems the compilation process is just too demanding of storage capacity; the 80MB of space the DataTower offered in 1982/3 would have certainly been more than enough (and had a price tag that reflected such a wealth of space).
