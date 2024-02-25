@@ -1,0 +1,111 @@
+
+(rules PCB lisa-priam-datatower-card
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 20)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 38)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.7)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.6)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-1]_1600:800_um"
+    (shape
+      (circle F.Cu 1600.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 1600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_1600:800_um" "Via[0-1]_1600:800_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_1600:800_um-kicad_default" "Via[0-1]_1600:800_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    GND +5V "unconnected-(J1--5V-Pad1)" "unconnected-(J1--12V-Pad2)" {slash}SLn {slash}SHn {slash}INTn "Net-(J1-{slash}IAKn)"
+    {slash}RESET CPUCK "unconnected-(J1-{slash}LDMA-Pad9)" "unconnected-(J1-{slash}BGACK-Pad10)" "unconnected-(J1-E-Pad11)" "unconnected-(J1-{slash}BR-Pad12)" "Net-(J1-{slash}BGINn)" /BDF
+    /BDE /BDD /BDC /BDB /BDA /BD9 /BD8 /BD7
+    /BD6 /BD5 /BD4 /BD3 /BD2 /BD1 /BD0 /BA1
+    /BA2 /BA3 /BA4 /BA5 BA6 /BA7 /BA8 BA9
+    /BAA /BAB "unconnected-(J1-BA12-Pad42)" "unconnected-(J1-{slash}VMA-Pad43)" "unconnected-(J1-+12V-Pad45)" {slash}DTACK "unconnected-(J1-{slash}AS-Pad47)" READ
+    "unconnected-(J1-{slash}LDS-Pad49)" "unconnected-(J1-{slash}UDS-Pad50)" "unconnected-(J1-SPKRIN-Pad51)" "unconnected-(J1-+5VSB-Pad52)" {slash}HWR HCBUS0 HCBUS1 "unconnected-(J2-Pad7)"
+    HCBUS2 {slash}BTREQ HCBUS5 HCBUS6 HCBUS7 HUNK {slash}HRD HAD0
+    HAD1 HCBUSP HAD2 {slash}HRST HCBUS3 HCBUS4 {slash}HIR PU1
+    PU2 "Net-(UB4A-~{S})" PU5 "Net-(UA4-A)" "unconnected-(UA4-Qa-Pad3)" "Net-(UA4-Qb)" "Net-(UA4-Qc)" "unconnected-(UA4-Qd-Pad6)"
+    "Net-(UA4-CLK)" {slash}FFR "unconnected-(UA4-Qe-Pad10)" "unconnected-(UA4-Qf-Pad11)" "unconnected-(UA4-Qg-Pad12)" "unconnected-(UA4-Qh-Pad13)" "Net-(UB2A-J)" "unconnected-(UA5-Pad4)"
+    "unconnected-(UA5-Pad5)" "unconnected-(UA5-Pad6)" "unconnected-(UA5-Pad8)" "unconnected-(UA5-Pad9)" "unconnected-(UA5-Pad10)" "unconnected-(UA5-Pad11)" "unconnected-(UA5-Pad12)" "unconnected-(UA5-Pad13)"
+    "Net-(UB1-Pad1)" "Net-(UB2B-Q)" "Net-(UB1-Pad3)" "Net-(UB3A-C)" "Net-(UB3B-~{Q})" "Net-(UB7B-J)" {slash}SH SHI
+    "Net-(UB2A-~{Q})" "Net-(UB2B-~{Q})" "Net-(UB3A-J)" CKP "Net-(UB3A-~{Q})" "Net-(UB3B-Q)" LAA "Net-(UB3A-~{R})"
+    POUT "Net-(UB4A-Q)" "unconnected-(UB4A-~{Q}-Pad6)" {slash}BUSE "Net-(UB4B-~{S})" LA5 LA2 LA1
+    LA4 LA3 "unconnected-(UB7A-Q-Pad5)" "unconnected-(UB7B-~{Q}-Pad7)" {slash}LORD {slash}SL "unconnected-(UC1-Pad11)" "unconnected-(UC1-Pad12)"
+    "unconnected-(UC1-Pad13)" {slash}HIWR "Net-(UC2-Pad10)" {slash}HIRD "Net-(UC3-Pad2)" PIN LA8 "Net-(UC3-Pad10)"
+    WR {slash}OEH {slash}OEL CKH CKL LA7 "Net-(UD2-D0)" "Net-(UD2-D1)"
+    "Net-(UD2-D2)" "Net-(UD2-D3)" "Net-(UD2-D4)" "Net-(UD2-D5)" "Net-(UD2-D6)" "Net-(UD2-D7)" /LD0 /LD1
+    /LD2 /LD3 /LD4 /LD5 /LD6 /LD7 LA6 "unconnected-(UE2-NC-Pad3)"
+    "unconnected-(UE2-Odd-Pad6)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
