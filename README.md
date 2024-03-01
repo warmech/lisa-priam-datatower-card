@@ -1,4 +1,4 @@
-# lisa-priam-datatower-card
+# Priam DataTower Interface Card for the Apple Lisa Expansion Bus
  
 ## Thoughts
 
