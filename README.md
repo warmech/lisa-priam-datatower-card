@@ -33,6 +33,6 @@ The driver for the Priam DataTower is baked into LOS and, from the sound of it, 
 >
 >We've also started work on an interesting little project that will try to fully exercise the DataTower in a special way. Stay tuned for more details.
 
-This would seem to indicate that the Lisa is capable of booting from a DataTower and that such a boot option will show up at the main boot menu. I need to have a run of cards fabricated to test this...
+This would seem to indicate that the Lisa is capable of booting from a DataTower and that such a boot option will show up at the main boot menu.
 
-Also, BLU appears to be able to image DataTower volumes... I know James made the original set of schematics for the interface card, so this means he must have not only got his DataTower fully operational but also that he was able to successfully reverse-engineer the system-level protocols for talking to the disk and at least read data (if not write) from it. Must reach out to him to see if he'd be willing to share data/documentation in regard to this. If so, this would be a huge leap forward toward an building an emulated DataTower.
+The SMART-T protocol documentation is located in the src\priam-src-data directory; this will need to be cross-referenced with the Lisa source code in order to determine next steps for an emulator.
